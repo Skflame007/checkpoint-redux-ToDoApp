@@ -52,3 +52,8 @@ body {
     transform: rotate(360deg);
   }
 }
+.done {
+  text-decoration: line-through;
+  color: red ;
+}
+
