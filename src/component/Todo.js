@@ -45,7 +45,9 @@ function Todo({ todo }) {
                     <>{todo.newTodoDesc}</>}
             </div>
             <ListGroup.Item className="todo" >
-                {todo.newTodo}
+                 <span className={todo.isDone ? "done" : null} >
+                {todo.newTodo}</span>
+               
                 <Form.Check checked={todo.isDone} onClick={() => dispatch(toggleTodo(todo.id))}></Form.Check>
                 <Button variant="outline-info" onClick={handleEditTodo}><AiFillEdit/></Button>
                 <Button variant="outline-danger" onClick={handleDeleteTodo}><AiFillCloseCircle /></Button>
